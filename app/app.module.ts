@@ -6,6 +6,10 @@ import { AppComponent }  from './app.component';
 
 import { ProductListComponent } from './products/product-list.component';
 
+import { StarComponent } from './shared/star.component';
+
+import { ProductFilterPipe } from './products/product-filter.pipe';
+
 @NgModule({
   imports: [ 
     BrowserModule,
@@ -13,7 +17,9 @@ import { ProductListComponent } from './products/product-list.component';
     ],
   declarations: [ 
     AppComponent,
-    ProductListComponent
+    ProductListComponent,
+    ProductFilterPipe,
+    StarComponent
    ],
   bootstrap: [ AppComponent ]
 })
