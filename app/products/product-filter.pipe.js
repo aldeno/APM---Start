@@ -9,8 +9,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-//Custom pipe filters IProduct array by product name. 
-//Filter value is passed with filterBy property
+//Every custom pipe must have Pipe decorator
 var ProductFilterPipe = (function () {
     function ProductFilterPipe() {
     }

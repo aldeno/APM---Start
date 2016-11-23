@@ -1,6 +1,8 @@
 
 import { Component, OnChanges, Input, Output, EventEmitter } from '@angular/core';
 
+
+//Every component must have a Component decorator
 @Component({
     selector: 'ai-star',
     templateUrl: 'app/shared/star.component.html',

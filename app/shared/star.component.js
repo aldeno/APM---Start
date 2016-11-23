@@ -9,6 +9,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
+//Every component must have a Component decorator
 var StarComponent = (function () {
     function StarComponent() {
         //Output decorator is used to pass value back to the parent component
