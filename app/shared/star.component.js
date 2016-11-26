@@ -23,7 +23,7 @@ var StarComponent = (function () {
     };
     //When the component is clicked rise ratingClicked event and set its payload
     StarComponent.prototype.onClick = function () {
-        this.ratingClicked.emit("The radting " + this.rating + " was clicked!");
+        this.ratingClicked.emit("The rating " + this.rating + " was clicked!");
     };
     __decorate([
         core_1.Input(), 

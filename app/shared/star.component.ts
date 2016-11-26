@@ -24,6 +24,6 @@ export class StarComponent implements OnChanges{
     }
     //When the component is clicked rise ratingClicked event and set its payload
     onClick():void{
-        this.ratingClicked.emit(`The radting ${this.rating} was clicked!`);
+        this.ratingClicked.emit(`The rating ${this.rating} was clicked!`);
     }
 }
