@@ -18,6 +18,8 @@ import { ProductDetailComponent } from './products/product-detail.component';
 
 import { RouterModule } from '@angular/router';
 
+import { ProductDetailGuard } from './products/product-guard.service';
+
 @NgModule({
   imports: [ 
     BrowserModule,
@@ -26,7 +28,7 @@ import { RouterModule } from '@angular/router';
     RouterModule.forRoot([
         { path: 'products', component: ProductListComponent },
         { path: 'welcome', component: WelcomeComponent },
-        { path: 'product/:id', component: ProductDetailComponent },
+        { path: 'product/:id', canActivate: [ProductDetailGuard], component: ProductDetailComponent },
         { path: '', redirectTo: 'welcome', pathMatch: 'full'},
         { path: '**', redirectTo: 'welcome', pathMatch: 'full' }
       ])
@@ -39,6 +41,7 @@ import { RouterModule } from '@angular/router';
     WelcomeComponent,
     ProductDetailComponent
    ],
+   providers: [ProductDetailGuard],
   bootstrap: [ AppComponent ]
 })
 export class AppModule { }

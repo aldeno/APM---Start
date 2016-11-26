@@ -10,7 +10,6 @@ import { ProductService } from './product.service'
     templateUrl: 'product-list.component.html',
     styleUrls: ['product-list.component.css']
 })
-
 export class ProductListComponent implements OnInit {
 
     //constructor(private _productService: ProductService) is as shortcut for declaring a private 
