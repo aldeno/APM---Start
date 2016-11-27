@@ -21,10 +21,7 @@ import { ProductService } from './products/product.service';
     <div class='container'>
         <router-outlet></router-outlet>
     </div>
-    `,
-    //Register service to the app Component
-    //All child components will have access to the service
-    providers: [ProductService]
+    `
 })
 
 export class AppComponent{
