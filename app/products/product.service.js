@@ -12,7 +12,9 @@ var core_1 = require('@angular/core');
 var http_1 = require('@angular/http');
 var Observable_1 = require('rxjs/Observable');
 require('rxjs/add/operator/map');
+require('rxjs/add/operator/filter');
 require('rxjs/add/operator/do');
+require('rxjs/Rx');
 require('rxjs/add/operator/catch');
 //Injectable decorator is required only if service depends on other services
 //But it is recomanded to use it on all services by convention
@@ -26,6 +28,12 @@ var ProductService = (function () {
             .map(function (response) { return response.json(); })
             .do(function (data) { return console.log('All: ' + JSON.stringify(data)); })
             .catch(this.handleError);
+    };
+    ProductService.prototype.getProductsById = function (id) {
+        console.log('getProductsById');
+        return this._http.get(this._productUrl)
+            .flatMap(function (response) { return response.json(); })
+            .first(function (x) { return x.productId == id; });
     };
     ProductService.prototype.handleError = function (error) {
         console.error(error);

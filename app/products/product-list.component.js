@@ -32,6 +32,8 @@ var ProductListComponent = (function () {
     ProductListComponent.prototype.onRatingClicked = function (message) {
         this.pageTitle = "Product List " + message;
     };
+    ProductListComponent.prototype.onProductNameClicked = function (product) {
+    };
     ProductListComponent = __decorate([
         core_1.Component({
             selector: 'pm-products',
